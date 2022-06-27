@@ -107,7 +107,7 @@ export   ROMS_APPLICATION=UPWELLING
 # Set a local environmental variable to define the path to the directories
 # where all this project's files are kept.
 
-export        MY_ROOT_DIR=$/Users/g/ROMS
+export        MY_ROOT_DIR=$/Users/root/ROMS
 export     MY_PROJECT_DIR=${MY_ROOT_DIR}/Projects/Upwelling
 
 # The path to the user's local current ROMS source code.
@@ -159,8 +159,8 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/Projects/Upwelling
 # out. Any string value (including off) will evaluate to TRUE in
 # conditional if-statements.
 
- export           USE_MPI=on            # distributed-memory parallelism
- export        USE_MPIF90=on            # compile with mpif90 script
+ export           USE_MPI=            # distributed-memory parallelism
+ export        USE_MPIF90=            # compile with mpif90 script
 #export         which_MPI=intel         # compile with mpiifort library
 #export         which_MPI=mpich         # compile with MPICH library
 #export         which_MPI=mpich2        # compile with MPICH2 library
@@ -169,8 +169,8 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/Projects/Upwelling
 
 #export        USE_OpenMP=on            # shared-memory parallelism
 
- export              FORT=ifort
-#export              FORT=gfortran
+#export              FORT=ifort
+export              FORT=gfortran
 #export              FORT=pgi
 
 #export         USE_DEBUG=on            # use Fortran debugging flags
@@ -237,8 +237,8 @@ fi
 # If applicable, use my specified library paths.
 #--------------------------------------------------------------------------
 
- export USE_MY_LIBS=no            # use system default library paths
-#export USE_MY_LIBS=yes           # use my customized library paths
+# export USE_MY_LIBS=no            # use system default library paths
+export USE_MY_LIBS=yes           # use my customized library paths
 
 MY_PATHS=${COMPILERS}/my_build_paths.sh
 
