@@ -107,7 +107,7 @@ export   ROMS_APPLICATION=UPWELLING
 # Set a local environmental variable to define the path to the directories
 # where all this project's files are kept.
 
-export        MY_ROOT_DIR=$/root/roms
+export        MY_ROOT_DIR=$ ~/roms
 export     MY_PROJECT_DIR=${MY_ROOT_DIR}/Projects/Upwelling
 
 # The path to the user's local current ROMS source code.
