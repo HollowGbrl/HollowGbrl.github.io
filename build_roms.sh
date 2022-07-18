@@ -107,7 +107,7 @@ export   ROMS_APPLICATION=UPWELLING
 # Set a local environmental variable to define the path to the directories
 # where all this project's files are kept.
 
-export        MY_ROOT_DIR=$ ~/roms
+export        MY_ROOT_DIR=$ ~/ROMS
 export     MY_PROJECT_DIR=${MY_ROOT_DIR}/Projects/Upwelling
 
 # The path to the user's local current ROMS source code.
@@ -159,13 +159,13 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/Projects/Upwelling
 # out. Any string value (including off) will evaluate to TRUE in
 # conditional if-statements.
 
- export           USE_MPI=            # distributed-memory parallelism
- export        USE_MPIF90=            # compile with mpif90 script
+ export           USE_MPI= on           # distributed-memory parallelism
+ export        USE_MPIF90= on           # compile with mpif90 script
 #export         which_MPI=intel         # compile with mpiifort library
 #export         which_MPI=mpich         # compile with MPICH library
-#export         which_MPI=mpich2        # compile with MPICH2 library
+ export         which_MPI=mpich2        # compile with MPICH2 library
 #export         which_MPI=mvapich2      # compile with MVAPICH2 library
- export         which_MPI=openmpi       # compile with OpenMPI library
+#export         which_MPI=openmpi       # compile with OpenMPI library
 
 #export        USE_OpenMP=on            # shared-memory parallelism
 
@@ -195,15 +195,15 @@ export              FORT=gfortran
 # instruct the ROMS build system to use nf-config to determine the
 # necessary libraries and paths to link into the ROMS executable.
 
-#export       USE_NETCDF4=on            # compile with NetCDF-4 library
-export   USE_PARALLEL_IO=on            # Parallel I/O with NetCDF-4/HDF5
+export       USE_NETCDF4=on            # compile with NetCDF-4 library
+#export   USE_PARALLEL_IO=on            # Parallel I/O with NetCDF-4/HDF5
 #export           USE_PIO=on            # Parallel I/O with PIO library
 #export       USE_SCORPIO=on            # Parallel I/O with SCORPIO library
 
 # If any of the coupling component use the HDF5 Fortran API for primary
 # I/O, we need to compile the main driver with the HDF5 library.
 
-export          USE_HDF5=on            # compile with HDF5 library
+#export          USE_HDF5=on            # compile with HDF5 library
 
 #--------------------------------------------------------------------------
 # If coupling Earth System Models (ESM), set the location of the ESM
@@ -237,8 +237,8 @@ fi
 # If applicable, use my specified library paths.
 #--------------------------------------------------------------------------
 
-# export USE_MY_LIBS=no            # use system default library paths
-export USE_MY_LIBS=yes           # use my customized library paths
+ export USE_MY_LIBS=no            # use system default library paths
+#export USE_MY_LIBS=yes           # use my customized library paths
 
 MY_PATHS=${COMPILERS}/my_build_paths.sh
 
